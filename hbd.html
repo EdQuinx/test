@@ -62,14 +62,18 @@ you give to every one who knows you.">
 	<script type="text/javascript" src="birthday.js"></script>
     <script type="text/javascript" src="hbd.js"></script>
 <script>
-window.onload = function() {
-  var context = new AudioContext();
-}
-</script>
+var source = "elvis.mp3"
+ var audio = document.createElement("audio");
+ //
+ audio.autoplay = true;
+ //
+ audio.load()
+ audio.addEventListener("load", function() { 
+     audio.play(); 
+ }, true);
+ audio.src = source;
+ </script>
 </head>
-<audio autoplay>
-      <source src="elvis.mp3">
-</audio>
 <body>
 	<div id="mainDiv">
 		<div id="content">
